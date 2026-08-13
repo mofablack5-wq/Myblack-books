@@ -1,0 +1,25 @@
+[book]
+authors = ["BLACK"]
+language = "zh-CN"
+multilingual = false
+title = "我的私人小说库"
+description = "一个用 mdBook 搭建的私人小说 / 文档阅读站，左侧章节目录、右侧正文，原生支持手机/电脑适配与夜间模式。"
+
+[output.html]
+# 站点根路径；部署到 GitHub Pages「项目仓库」时必须与仓库名一致
+# 本仓库为 Myblack-books，故为 /Myblack-books/
+# 若绑定自定义域名或部署到用户/组织页（username.github.io），改回 "/" 即可
+site-url = "/Myblack-books/"
+# 默认主题：light / navy / ayu；读者可在页面右上角手动切换明/暗
+default-theme = "light"
+# 折叠侧边栏的章节层级
+git-repository-url = ""
+# 在页面顶部显示「在 GitHub 上编辑此页」等链接（留空则不显示）
+edit-url-template = ""
+
+[output.html.fold]
+enable = true
+level = 0
+
+[output.html.search]
+enable = true

@@ -1,0 +1,11 @@
+# mdBook 构建产物
+/book
+
+# 本地 mdBook 二进制（放在仓库根目录时忽略）
+/mdbook.exe
+/mdbook
+
+# 系统 / 编辑器
+.DS_Store
+Thumbs.db
+*.swp

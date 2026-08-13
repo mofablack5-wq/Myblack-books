@@ -1,7 +1,6 @@
 [book]
 authors = ["BLACK"]
 language = "zh-CN"
-multilingual = false
 title = "我的私人小说库"
 description = "一个用 mdBook 搭建的私人小说 / 文档阅读站，左侧章节目录、右侧正文，原生支持手机/电脑适配与夜间模式。"
 

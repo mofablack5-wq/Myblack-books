@@ -1,0 +1,86 @@
+/* ===========================================================
+   中文小说阅读优化样式（mdBook 会自动加载本文件）
+   - 衬线字体、舒适行距、两端对齐、首行缩进
+   - 章节标题居中
+   - 适配明 / 暗两种主题与手机端
+   =========================================================== */
+
+:root {
+  --reader-max-width: 760px;
+  --reader-font: "Noto Serif SC", "Source Han Serif SC", "Songti SC",
+    "SimSun", "STSong", Georgia, "Times New Roman", serif;
+  --reader-accent: #b59f6b;
+}
+
+/* 正文容器：限制最大宽度并居中，长文阅读更舒适 */
+.content,
+#content {
+  max-width: var(--reader-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-family: var(--reader-font);
+  font-size: 1.06rem;
+  line-height: 1.95;
+  word-wrap: break-word;
+}
+
+/* 段落：两端对齐 + 首行缩进，符合中文排版习惯 */
+.content p,
+#content p {
+  text-align: justify;
+  text-justify: inter-ideograph;
+  text-indent: 2em;
+  margin: 0 0 1.15em;
+}
+
+/* 章节标题居中 */
+.content h1,
+#content h1 {
+  text-align: center;
+  font-weight: 700;
+  margin: 0.4em 0 1.2em;
+  letter-spacing: 0.05em;
+}
+
+/* 二级及以下标题左对齐、带间距 */
+.content h2,
+.content h3,
+#content h2,
+#content h3 {
+  font-weight: 600;
+  margin: 1.6em 0 0.8em;
+}
+
+/* 题记 / 引用块样式 */
+.content blockquote,
+#content blockquote {
+  border-left: 3px solid var(--reader-accent);
+  background: rgba(181, 159, 107, 0.08);
+  color: inherit;
+  font-style: normal;
+  border-radius: 0 6px 6px 0;
+  padding: 0.6em 1em;
+}
+
+/* 暗色模式：引用块更柔和 */
+[data-theme="dark"] .content blockquote {
+  background: rgba(181, 159, 107, 0.12);
+}
+
+/* 侧边栏目录字号微调 */
+.sidebar .chapter li a {
+  font-size: 0.95rem;
+}
+
+/* 移动端：宽度自适应，留白更紧凑 */
+@media (max-width: 768px) {
+  .content,
+  #content {
+    font-size: 1.02rem;
+    line-height: 1.85;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+  }
+}
